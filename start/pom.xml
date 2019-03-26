@@ -27,7 +27,7 @@
         <version.maven-surefire-plugin>3.0.0-M1</version.maven-surefire-plugin>
         <version.maven-failsafe-plugin>3.0.0-M1</version.maven-failsafe-plugin>
         <!-- OpenLiberty runtime -->
-        <version.openliberty-runtime>RELEASE</version.openliberty-runtime>
+        <version.openliberty-runtime>19.0.0.2</version.openliberty-runtime>
         <http.port>9080</http.port>
         <https.port>9443</https.port>
         <!-- tag::server-type[] -->
@@ -92,7 +92,7 @@
             <dependency>
                 <groupId>io.openliberty.features</groupId>
                 <artifactId>features-bom</artifactId>
-                <version>RELEASE</version>
+                <version>19.0.0.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -206,6 +206,8 @@
                     <stripVersion>true</stripVersion>
                     <configFile>src/main/liberty/config/server.xml</configFile>
                     <!-- tag::loose-app[] -->
+                    <!--  Loose application means it is not packaged into a .war, the .class files are monitored
+                          for change and redeploy without stop/starting the server. -->
                     <looseApplication>true</looseApplication>
                     <!-- end::loose-app[] -->
                     <packageFile>${package.file}</packageFile>
