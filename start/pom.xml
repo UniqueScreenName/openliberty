@@ -50,7 +50,7 @@
 			
 		</profile>
 		<profile>
-			<id>update-package</id>
+			<id>server-update-package</id>
 			<properties>
 				<package.file>
 					${project.build.directory}/${app.name}.${project.version}.zip
@@ -59,10 +59,10 @@
 			</properties>
 		</profile>		
 		<profile>
-			<id>server-package</id>
+			<id>server-install-package</id>
 			<properties>
 				<package.file>
-					${project.build.directory}/${server.name}.${project.artifactId}.zip
+					${project.build.directory}/${server.name}.${project.version}.zip
 				</package.file>
 				<packaging.type>minify</packaging.type>
 			</properties>
@@ -72,7 +72,7 @@
 			<id>minify-runnable-package</id>
 			<properties>
 				<package.file>
-					${project.build.directory}/${app.name}.${project.artifactId}.jar
+					${project.build.directory}/${app.name}.${project.version}.jar
 				</package.file>
 				<packaging.type>minify,runnable</packaging.type>
 			</properties>
